@@ -1,11 +1,10 @@
 const mongoose = require("mongoose");
 
 //testdb is name of database, it will automatically make it
-mongoose
-  .connect("mongodb+srv://artscovery_GB:<db_password>@cluster0.rerar8k.mongodb.net/")
+  mongoose
+  .connect("mongodb+srv://artscovery_GB:1ShY0YkK8qqXn7Tk@cluster0.rerar8k.mongodb.net/testdb")
   .then(() => console.log("Connected to mongodb..."))
   .catch((err) => console.error("could not connect ot mongodb...", err));
-
 const schema = new mongoose.Schema({
   name: String,
 });
