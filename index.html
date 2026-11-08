@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARTSCOVERY API</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Mansalva&display=swap");
+
+      :root {
+        --bg: rgb(216, 236, 251);
+        --bg-dark: rgb(42, 79, 108);
+        --accent: rgb(18, 53, 159);
+        --highlight: rgb(197, 181, 215);
+        --rainbow: linear-gradient(
+          to right,
+          rgb(255, 121, 121),
+          rgb(252, 182, 141),
+          rgb(232, 224, 127),
+          rgb(171, 249, 157),
+          rgb(168, 176, 250),
+          rgb(212, 135, 247)
+        );
+      }
+
+      body {
+        margin: 0;
+        padding: 20px;
+        background-color: var(--bg);
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      }
+
+      header {
+        background: var(--rainbow);
+        padding: 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-family: "Mansalva", cursive;
+        font-size: 64px;
+        color: transparent;
+        -webkit-text-stroke: 2px white;
+      }
+
+      header p {
+        margin: 5px 0 0;
+        color: white;
+        font-size: 18px;
+        text-shadow: 2px 2px 6px rgba(18, 53, 159, 0.4);
+      }
+
+      main {
+        max-width: 700px;
+        margin: 30px auto;
+        padding: 20px 30px;
+        background-color: var(--bg-dark);
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px 10px rgba(18, 53, 159, 0.25);
+      }
+
+      main h2 {
+        text-align: center;
+        font-family: "Mansalva", cursive;
+        font-size: 36px;
+        color: var(--highlight);
+      }
+
+      .endpoint {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+      }
+
+      .method {
+        padding: 4px 12px;
+        background: var(--rainbow);
+        border-radius: 20px;
+        font-weight: bold;
+        color: var(--bg-dark);
+      }
+
+      .path {
+        font-family: monospace;
+        font-size: 18px;
+        color: var(--bg);
+      }
+
+      .info {
+        flex: 1 1 100%;
+        margin: 0;
+        color: var(--highlight);
+      }
+
+      .endpoint a {
+        margin-left: auto;
+        padding: 8px 18px;
+        background-color: var(--highlight);
+        border-radius: 20px;
+        color: var(--bg-dark);
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .endpoint a:hover {
+        background-color: white;
+      }
+
+      footer {
+        text-align: center;
+        color: var(--accent);
+      }
+
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 40px;
+        }
+
+        main {
+          padding: 15px;
+        }
+
+        .endpoint a {
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Artscovery API</h1>
+      <p>&#9733; Data for the Artscovery React site &#9733;</p>
+    </header>
+
+    <main>
+      <h2>Available Requests</h2>
+
+      <div class="endpoint">
+        <span class="method">GET</span>
+        <span class="path">/api/resources</span>
+        <p class="info">Returns every helpful resource (videos and shopping links) as JSON.</p>
+        <a href="/api/resources">All Resources</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; graciebergmann</p>
+    </footer>
+  </body>
+</html>
